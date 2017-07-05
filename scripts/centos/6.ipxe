@@ -1,5 +1,5 @@
 #!ipxe
 imgfree
-kernel ${centos-6-repo}vmlinuz initrd=initrd.img inst.ks=${boot-dir}centos/6.cfg
+kernel ${centos-6-repo}vmlinuz initrd=initrd.img ks=${boot-dir}centos/6.cfg
 initrd ${centos-6-repo}initrd.img
 boot
