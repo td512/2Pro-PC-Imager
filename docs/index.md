@@ -8,7 +8,7 @@ Easy! Clone this repo into `/var/www/html` (or where ever you put your HTTPd doc
 
 ## How do I create a bootscript?
 
-Easy. Visit [rom-o-matic](https://rom-o-matic.eu/), select `UNDI only`, and once you're finished with your bootscript, hit `Proceed >>`, and upload the file to `/tftpboot`, (or where ever you put TFTPd's root). Don't forget to set DHCP options 66 and 67! If you forget to do this, PXE won't work.
+Easy. Visit [rom-o-matic](https://rom-o-matic.eu/), select `UNDI only`, and once you're finished with your bootscript, hit `Proceed`, and upload the file to `/tftpboot`, (or where ever you put TFTPd's root). Don't forget to set DHCP options 66 and 67! If you forget to do this, PXE won't work.
 
 ## I don't know what my bootscript should look like, can you show me?
 
