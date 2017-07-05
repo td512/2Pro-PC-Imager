@@ -1,5 +1,5 @@
 #!ipxe
 imgfree
-kernel ${centos-7-repo}vmlinuz initrd=initrd.img
+kernel ${centos-7-repo}vmlinuz initrd=initrd.img inst.ks=${boot-dir}centos/7.cfg
 initrd ${centos-7-repo}initrd.img
 boot
