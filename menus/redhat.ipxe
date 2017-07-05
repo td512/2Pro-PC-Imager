@@ -1,0 +1,17 @@
+#!ipxe
+echo ${cls}
+menu Red Hat - ${menu-title}
+item rh6                   6
+item rh7                   7
+item back                 Back...
+choose --timeout ${menu-timeout} --default ${redhat-menu-default} selected
+goto ${selected}
+
+:rh6
+chain ${scripts-path}redhat/6.ipxe
+
+:rh7
+chain ${scripts-path}redhat/7.ipxe
+
+:back
+chain ${menus-path}menu.ipxe

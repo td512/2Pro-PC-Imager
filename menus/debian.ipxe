@@ -1,0 +1,17 @@
+#!ipxe
+echo ${cls}
+menu Debian - ${menu-title}
+item 8                 Jessie Desktop
+item 8-server          Jessie Server
+item back                 Back...
+choose --timeout ${menu-timeout} --default ${debian-menu-default} selected
+goto ${selected}
+
+:1404
+chain ${scripts-path}ubuntu/8.ipxe
+
+:1404-server
+chain ${scripts-path}ubuntu/8-server.ipxe
+
+:back
+chain ${menus-path}menu.ipxe

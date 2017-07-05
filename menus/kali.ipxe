@@ -1,0 +1,13 @@
+#!ipxe
+echo ${cls}
+menu Kali Linux - ${menu-title}
+item k-normal             Normal
+item back                 Back...
+choose --timeout ${menu-timeout} --default ${kali-menu-default} selected
+goto ${selected}
+
+:back
+chain ${menus-path}menu.ipxe
+
+:k-normal
+chain ${scripts-path}kali/k-normal.ipxe

@@ -1,0 +1,5 @@
+#!ipxe
+imgfree
+kernel ${kali-repo}linux vga=788 -- quiet
+initrd ${kali-repo}initrd.gz
+boot

@@ -1,0 +1,25 @@
+#!ipxe
+echo ${cls}
+menu Fedora - ${menu-title}
+item 24                   24 Workstation
+item 24s                   24 Server
+item 25                   25 Workstation
+item 25s                  25 Server
+item back                 Back...
+choose --timeout ${menu-timeout} --default ${fedora-menu-default} selected
+goto ${selected}
+
+:24
+chain ${scripts-path}fedora/25.ipxe
+
+:25
+chain ${scripts-path}fedora/26.ipxe
+
+:24s
+chain ${scripts-path}fedora/25s.ipxe
+
+:25s
+chain ${scripts-path}fedora/26s.ipxe
+
+:back
+chain ${menus-path}menu.ipxe

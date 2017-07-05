@@ -1,0 +1,6 @@
+#!ipxe
+
+imgfree
+kernel ${ubuntu-repo}1404/linux  -- quiet initrd=initrd.gz
+initrd ${ubuntu-repo}1404/initrd.gz
+boot

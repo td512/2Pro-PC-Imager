@@ -1,0 +1,3 @@
+#!ipxe
+echo Autoconfiguring network with DHCP...
+dhcp

@@ -1,0 +1,5 @@
+#!ipxe
+imgfree
+kernel ${fedora-repo}24/s/vmlinuz
+initrd ${fedora-repo}24/s/initrd.img
+boot

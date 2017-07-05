@@ -1,0 +1,17 @@
+#!ipxe
+echo ${cls}
+menu CentOS - ${menu-title}
+item c6                   6
+item c7                   7
+item back                 Back...
+choose --timeout ${menu-timeout} --default ${centos-menu-default} selected
+goto ${selected}
+
+:c6
+chain ${scripts-path}centos/6.ipxe
+
+:c7
+chain ${scripts-path}centos/7.ipxe
+
+:back
+chain ${menus-path}menu.ipxe

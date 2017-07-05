@@ -1,0 +1,6 @@
+#!ipxe
+
+imgfree
+kernel ${debian-repo}8/linux  -- quiet initrd=initrd.gz
+initrd ${debian-repo}8/initrd.gz
+boot

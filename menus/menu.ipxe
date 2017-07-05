@@ -1,0 +1,54 @@
+#!ipxe
+:start
+echo ${cls}
+menu ${menu-title}
+item --gap --             ------------------------- Operating systems ------------------------------
+item kali                   Kali
+item debian               Debian
+item ubuntu              Ubuntu
+item redhat               Red Hat
+item centos               CentOS
+item fedora                Fedora
+item win32                Windows
+item rescue                Rescue Systems
+item --gap --             ------------------------- Advanced options -------------------------------
+item shell                Drop to iPXE shell
+item reboot               Reboot computer
+item reload-menu          Reload menu
+item
+item exit                 Exit ${menu-title} and continue BIOS boot
+choose --timeout ${menu-timeout} --default ${menu-default} selected
+goto ${selected}
+
+:kali
+chain ${menus-path}kali.ipxe
+
+:ubuntu
+chain ${menus-path}ubuntu.ipxe
+
+:centos
+chain ${menus-path}centos.ipxe
+
+:debian
+chain ${menus-path}debian.ipxe
+
+:redhat
+chain ${menus-path}redhat.ipxe
+
+:fedora
+chain ${menus-path}fedora.ipxe
+
+:win32
+chain ${menus-path}win32.ipxe
+
+:rescue
+chain ${menus-path}rescue.ipxe
+
+:shell
+echo Type 'exit' to exit the menu
+
+:reboot
+reboot
+
+:reload-menu
+boot ${init-dir}

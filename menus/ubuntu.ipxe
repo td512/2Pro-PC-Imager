@@ -1,0 +1,25 @@
+#!ipxe
+echo ${cls}
+menu Ubuntu - ${menu-title}
+item 1404                 14.04 Desktop
+item 1404-server          14.04 Server
+item 1604                 16.04 Desktop
+item 1604-server          16.04 Server
+item back                 Back...
+choose --timeout ${menu-timeout} --default ${ubuntu-menu-default} selected
+goto ${selected}
+
+:1404
+chain ${scripts-path}ubuntu/1404.ipxe
+
+:1404-server
+chain ${scripts-path}ubuntu/1404-server.ipxe
+
+:1604
+chain ${scripts-path}ubuntu/1604.ipxe
+
+:1604-server
+chain ${scripts-path}ubuntu/1604-server.ipxe
+
+:back
+chain ${menus-path}menu.ipxe

@@ -1,0 +1,9 @@
+#!ipxe
+echo ${cls}
+menu Rescue - ${menu-title}
+item back                 Back...
+choose --timeout ${menu-timeout} --default ${rescue-menu-default} selected
+goto ${selected}
+
+:back
+chain ${menus-path}menu.ipxe
