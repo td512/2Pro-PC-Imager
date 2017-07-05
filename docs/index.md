@@ -10,7 +10,7 @@ Easy! Clone this repo into `/var/www/html` (or where ever you put your HTTPd doc
 
 Easy. Visit [rom-o-matic](https://rom-o-matic.eu/), select `UNDI only`, and once you're finished with your bootscript, hit `Proceed >>`, and upload the file to `/tftpboot`, (or where ever you put TFTPd's root). Don't forget to set DHCP options 66 and 67! If you forget to do this, PXE won't work.
 
-## I don't know what m bootscript should look like, can you show me?
+## I don't know what my bootscript should look like, can you show me?
 
 Sure, here's what mine looks like.
 
@@ -30,4 +30,4 @@ Report it over [here](https://github.com/td512/2Pro-PC-Imager), and one of my mi
 
 ## How do I contribute?
 
-Clone my repo, make your changes, and make a pull request. Be sure to tag it with `bugfix` or `improvement`. 
+Clone my repo, make your changes, and make a pull request. Be sure to tag it with `bugfix` or `improvement`.
