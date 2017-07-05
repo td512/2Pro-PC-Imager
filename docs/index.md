@@ -23,3 +23,11 @@ chain http://10.10.10.80:81/init/init.ipxe
 ```
 
 Easy as that.
+
+## Found a bug, or need help?
+
+Report it over [here](https://github.com/td512/2Pro-PC-Imager), and one of my minions (probably me) will help you along
+
+## How do I contribute?
+
+Clone my repo, make your changes, and make a pull request. Be sure to tag it with `bugfix` or `improvement`. 
