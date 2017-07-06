@@ -1,11 +1,6 @@
 #!ipxe
 
 imgfree
-kernel ${protocol}${server}${port}/wimboot
-initrd ${boot-dir}win32/10/install.bat                                install.bat
-initrd ${boot-dir}win32/winpeshl.ini                               winpeshl.ini
-initrd ${win32-repo}10/bootmgr bootmgr
-initrd ${win32-repo}10/boot/bcd bcd
-initrd ${win32-repo}10/boot/boot.sdi boot.sdi
-initrd ${win32-repo}10/sources/boot.wim boot.wim
+kernel ${protocol}${server}${port}/memdisk iso raw
+initrd ${win32-repo}pe/WinPE10.iso
 boot

@@ -1,11 +1,6 @@
 #!ipxe
 
 imgfree
-kernel ${protocol}${server}${port}/wimboot
-initrd ${boot-dir}win32/7/install.bat                                install.bat
-initrd ${boot-dir}win32/winpeshl.ini                               winpeshl.ini
-initrd ${win32-repo}7/bootmgr bootmgr
-initrd ${win32-repo}7/boot/bcd bcd
-initrd ${win32-repo}7/boot/boot.sdi boot.sdi
-initrd ${win32-repo}7/sources/boot.wim boot.wim
+kernel ${protocol}${server}${port}/memdisk iso raw
+initrd ${win32-repo}pe/WinPE7.iso
 boot

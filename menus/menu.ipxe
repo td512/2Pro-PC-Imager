@@ -46,6 +46,8 @@ chain ${menus-path}rescue.ipxe
 
 :shell
 echo Type 'exit' to exit the menu
+shell
+goto start
 
 :reboot
 reboot
