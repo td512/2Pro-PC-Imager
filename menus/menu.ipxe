@@ -3,13 +3,13 @@
 echo ${cls}
 menu ${menu-title}
 item --gap --             ------------------------- Operating systems ------------------------------
-item kali                   Kali
+item win32                Windows
 item debian               Debian
 item ubuntu              Ubuntu
 item redhat               Red Hat
 item centos               CentOS
 item fedora                Fedora
-item win32                Windows
+item kali                   Kali
 item rescue                Rescue Systems
 item --gap --             ------------------------- Advanced options -------------------------------
 item shell                Drop to iPXE shell

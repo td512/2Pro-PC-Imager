@@ -1,16 +1,12 @@
 #!ipxe
 echo ${cls}
 menu Windows - ${menu-title}
-item xpbe                 XP Black Edition
 item 7          7
 item 81                 8.1
 item 10          10
 item back                 Back...
 choose --timeout ${menu-timeout} --default ${ubuntu-menu-default} selected
 goto ${selected}
-
-:xpbe
-chain ${scripts-path}win32/xpbe.ipxe
 
 :7
 chain ${scripts-path}win32/7.ipxe
