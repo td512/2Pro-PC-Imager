@@ -1,0 +1,5 @@
+#!ipxe
+imgfree
+kernel ${image-path}redhat/7/images/pxeboot/vmlinuz initrd=initrd.img ks=${boot-dir}redhat/7.cfg
+initrd ${image-path}redhat/7/images/pxeboot/initrd.img
+boot

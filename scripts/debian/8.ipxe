@@ -1,6 +1,6 @@
 #!ipxe
 
 imgfree
-kernel ${debian-repo}8/linux  -- quiet initrd=initrd.gz
+kernel ${debian-repo}8/linux  install auto=true priority=critical preseed/url=http://10.10.10.80:81/bootscripts/debian/8.cfg -- quiet initrd=initrd.gz
 initrd ${debian-repo}8/initrd.gz
 boot
