@@ -26,7 +26,7 @@ Easy as that.
 
 # Found a bug, or need help?
 
-Report it over [here](https://github.com/td512/2Pro-PC-Imager/issues/new), and one of my minions (probably me) will help you along
+Report it over [here](https://github.com/td512/Monarch-PC-Imager/issues/new), and one of my minions (probably me) will help you along
 
 # How do I contribute?
 
